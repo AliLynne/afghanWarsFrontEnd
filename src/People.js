@@ -6,8 +6,8 @@ import Person from './Person'
 class People extends Component {
   render() {
     return(
-      <div>
-        <h1>People</h1>
+      <div className="container">
+        <h3>People</h3>
         <PersonForm />
         <Person />
         <Person />
