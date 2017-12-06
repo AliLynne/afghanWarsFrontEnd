@@ -2,10 +2,10 @@ import React from 'react'
 import { Card, CardActions, CardHeader, CardText} from 'material-ui/Card'
 import FlatButton from 'material-ui/FlatButton'
 
-const Person = () => (
+const Person = ({name, description}) => (
   <Card>
     <CardHeader
-      title="Person Name"
+      title={name}
       actAsExpander={true}
       showExpandableButton={true}
     />
@@ -14,11 +14,8 @@ const Person = () => (
       <FlatButton label="Events" />
     </CardActions>
     <CardText expandable={true}>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-     Donec mattis pretium massa. Aliquam erat volutpat. Nulla facilisi.
-     Donec vulputate interdum sollicitudin. Nunc lacinia auctor quam sed pellentesque.
-     Aliquam dui mauris, mattis quis lacus id, pellentesque lobortis odio.
-   </CardText>
+      {description}
+    </CardText>
   </Card>
 )
 
