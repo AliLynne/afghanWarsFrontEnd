@@ -3,7 +3,7 @@ import { Card, CardActions, CardHeader, CardText} from 'material-ui/Card'
 import FlatButton from 'material-ui/FlatButton'
 import RaisedButton from 'material-ui/RaisedButton'
 
-const Event = ({name, description}) => (
+const Group = ({name, description, onDelete}) => (
   <Card>
     <CardHeader
       title={name}
@@ -12,10 +12,11 @@ const Event = ({name, description}) => (
     />
     <CardActions>
       <FlatButton label="People" />
-      <FlatButton label="Groups" />
+      <FlatButton label="Events" />
       <RaisedButton
         label="Delete"
         secondary={true}
+        onClick={onDelete}
       />
     </CardActions>
     <CardText expandable={true}>
@@ -24,4 +25,4 @@ const Event = ({name, description}) => (
   </Card>
 )
 
-export default Event
+export default Group
